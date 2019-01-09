@@ -23,9 +23,7 @@ def formatsize(numbytes):
 # Use the appropriate path constructor
 # For now...
 pth = os.path.expanduser('~')
-mfl = PurePath('/', 'Users', pth, 'Desktop', 'manifest.xml')
-
-
+mfl = PurePath(pth, 'Desktop', 'manifest.xml')
 
 manifest = ET.parse(mfl).getroot()
 namespaces = {'dfxml' : 
