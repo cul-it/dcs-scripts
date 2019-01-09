@@ -5,6 +5,7 @@ from collections import defaultdict
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import re
+import os
 
 # Pilfered from stackoverflow
 def formatsize(numbytes):
@@ -21,7 +22,10 @@ def formatsize(numbytes):
 # TODO: Set name of input manifest.xml from IPP procedure
 # Use the appropriate path constructor
 # For now...
-mfl = PurePath('/', 'Users', 'map6', 'Desktop', 'manifest.xml')
+pth = os.path.expanduser('~')
+mfl = PurePath('/', 'Users', pth, 'Desktop', 'manifest.xml')
+
+
 
 manifest = ET.parse(mfl).getroot()
 namespaces = {'dfxml' : 
