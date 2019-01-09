@@ -21,7 +21,7 @@ def formatsize(numbytes):
 # TODO: Set name of input manifest.xml from IPP procedure
 # Use the appropriate path constructor
 # For now...
-mfl = PurePath('/', 'Users', 'dd388', 'Desktop', 'hashdeep_sample.xml')
+mfl = PurePath('/', 'Users', 'map6', 'Desktop', 'manifest.xml')
 
 manifest = ET.parse(mfl).getroot()
 namespaces = {'dfxml' : 
