@@ -6,6 +6,7 @@ from datetime import datetime
 import xml.etree.ElementTree as ET
 import re
 import os
+import sys
 
 # Pilfered from stackoverflow
 def formatsize(numbytes):
@@ -19,15 +20,19 @@ def formatsize(numbytes):
     return formatted
 
 
-# TODO: Set name of input manifest.xml from IPP procedure
-# Use the appropriate path constructor
-# For now...
+# Set up paths based on procedure
+
 pth = os.path.expanduser('~')
 mfl = PurePath(pth, 'Desktop', 'manifest.xml')
+rcl = PurePath(pth, 'Desktop', 'TransferRMA03487Update{0}{1}.txt'.format(
+            datetime.today().year, str(datetime.today().month).zfill(2)))
 
 manifest = ET.parse(mfl).getroot()
 namespaces = {'dfxml' : 
               'http://www.forensicswiki.org/wiki/Category:Digital_Forensics_XML' }
+
+if not Path(rcl).exists():
+    sys.exit("Robocopy log does not exist at {0}".format(rcl))
 
 # Reporting Variables
 extlist = defaultdict(lambda: 0)
@@ -50,27 +55,26 @@ for f in manifest.findall('dfxml:fileobject', namespaces):
     timelist.append(timestamp)
 
 
-# TODO: Set name of robocopy log from IPP procedure
 # Robocopy patterns
-#relogstart = re.compile("Started : (.*)")
-#relogstop = re.compile("Ended : (.*)")
+relogstart = re.compile("Started : (.*)")
+relogstop = re.compile("Ended : (.*)")
 
-#with open(f, 'r') as rlog:
-#    robocopylog = rlog.readlines()
-#    timein = None
-#    timeout = None
-#
-#    for rcl in robocopylog:
-#        if timein is None:
-#            rstart = relogstart.search(rcl)
-#            if rstart is not None:
-#                timein = datetime.strptime(rstart.group(1),
-#                                           '%A, %B %d, %Y %I:%M:%S %p')
-#        if timeout is None:
-#            rend = relogstop.search(rcl)
-#            if rend is not None:
-#                timeout = datetime.strptime(rend.group(1),
-#                                            '%A, %B %d, %Y %I:%M:%S %p')
+with open(rcl, 'r') as rlog:
+    robocopylog = rlog.readlines()
+    timein = None
+    timeout = None
+
+    for rcl in robocopylog:
+        if timein is None:
+            rstart = relogstart.search(rcl)
+            if rstart is not None:
+                timein = datetime.strptime(rstart.group(1),
+                                           '%A, %B %d, %Y %I:%M:%S %p')
+        if timeout is None:
+            rend = relogstop.search(rcl)
+            if rend is not None:
+                timeout = datetime.strptime(rend.group(1),
+                                            '%A, %B %d, %Y %I:%M:%S %p')
 
 
 # PRINT EVERYTHING
@@ -81,6 +85,9 @@ for k in sorted(extlist, key=str.casefold):
     print('{0:>16} : {1}'.format(k, extlist[k]))
 print('Most recent timestamp: {0}'.format(datetime.isoformat(timelist[0])))
 print('Latest timestamp: {0}'.format(datetime.isoformat(timelist[-1])))
-print('Placeholder for Robocopy Stats')
+print('Transfer statistics from Robocopy log')
+print('Start time: {0}'.format(timein.isoformat()))
+print('End time: {0}'.format(timeout.isoformat()))
+print('Transfer time: {0}'.format(str(timeout - timein)))
 print('\n')
 
