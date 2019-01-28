@@ -74,7 +74,7 @@ with open(rcl, 'r') as rlog:
             rend = relogstop.search(rcl)
             if rend is not None:
                 timeout = datetime.strptime(rend.group(1),
-                                            '%A %B %d %I:%M:%S %Y')
+                                            '%a %b %d %I:%M:%S %Y')
 
 
 # PRINT EVERYTHING
