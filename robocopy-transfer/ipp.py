@@ -69,12 +69,12 @@ with open(rcl, 'r') as rlog:
             rstart = relogstart.search(rcl)
             if rstart is not None:
                 timein = datetime.strptime(rstart.group(1),
-                                           '%A, %B %d, %Y %I:%M:%S %p')
+                                           '%a %b %d %I:%M:%S %Y')
         if timeout is None:
             rend = relogstop.search(rcl)
             if rend is not None:
                 timeout = datetime.strptime(rend.group(1),
-                                            '%A, %B %d, %Y %I:%M:%S %p')
+                                            '%A %B %d %I:%M:%S %Y')
 
 
 # PRINT EVERYTHING
