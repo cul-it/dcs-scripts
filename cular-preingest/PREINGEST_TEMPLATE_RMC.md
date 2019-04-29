@@ -44,6 +44,7 @@ Deposit structure
     a. An aggregate called _Documentation containing any documentation, including
         * a copy of this plan
         * Spreadsheet with item level metadata
+	* a readme file describing file naming conventions, technical specifications, and a list of the files to which the readme applies
         * $ADDITIONAL_DOCUMENTATION_STRING_LIST
     b. Asset-level aggregates, each containing their master level and derivative files.
 
@@ -57,7 +58,7 @@ Technical Plan
     b. Metadata, JSON, and _Documentation folder and contents will be ingested into CULAR-Classic
     c. Destination path is RMC/$RMC_SUBDIVISION/$CULAR_TITLE
 2. Resources:
-    a. The source for assets is smb://files.cornell.edu/lib/$RMC_SERVER/$CULAR_TITLE/FOR_CULAR
+    a. The source for assets is smb://files.cornell.edu/lib/$RMC_SERVER/_RMC/FOR_CULAR/$CULAR_TITLE/
     b. Aggregate size is $AGGREGATE_SIZE
         * $NUMBER_TYPE_LIST
     c. Ingest as arranged at source
@@ -67,7 +68,6 @@ Technical Plan
     b. Ingest as arranged
 4. Metadata:
     a. The source for collection level metadata is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/$CULAR_TITLE.xml
-    b. The source for the JSON manifest created through ingest is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE.json
 5. Filesystem dates do not need to be captured.
 6. The assets are not believed to contain sensitive data.
 7. When ingest is complete developers will notify **Dianne Dietrich** who will work with depositor to obtain final sign off.
