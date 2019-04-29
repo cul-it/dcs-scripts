@@ -44,7 +44,7 @@ Deposit structure
     a. An aggregate called _Documentation containing any documentation, including
         * a copy of this plan
         * Spreadsheet with item level metadata
-	* a readme file describing file naming conventions, technical specifications, and a list of the files to which the readme applies
+        * a readme file describing file naming conventions, technical specifications, and a list of the files to which the readme applies
         * $ADDITIONAL_DOCUMENTATION_STRING_LIST
     b. Asset-level aggregates, each containing their master level and derivative files.
 
