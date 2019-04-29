@@ -1,6 +1,7 @@
 THIS DOCUMENT HAS BEEN GENERATED AUTOMATICALLY
 ----------------------------------------------
 
+Template version: 2019-04-29
 Depositor: **The Division of Rare and Manuscript Collections**  
 Collection title: **$COLLECTION_TITLE**  
 CULAR title: **$CULAR_TITLE**  
