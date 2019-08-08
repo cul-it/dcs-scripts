@@ -20,6 +20,10 @@ def formatsize(numbytes):
     return formatted
 
 
+# Timeformats, old one commented out
+timeformat = '%A, %B %d, %Y %I:%M:%S %p'
+# timeformat = '%a %b %d %I:%M:%S %Y'
+
 # Set up paths based on procedure
 
 pth = os.path.expanduser('~')
@@ -68,13 +72,12 @@ with open(rcl, 'r') as rlog:
         if timein is None:
             rstart = relogstart.search(rcl)
             if rstart is not None:
-                timein = datetime.strptime(rstart.group(1),
-                                           '%a %b %d %I:%M:%S %Y')
+                timein = datetime.strptime(rstart.group(1), timeformat)
+
         if timeout is None:
             rend = relogstop.search(rcl)
             if rend is not None:
-                timeout = datetime.strptime(rend.group(1),
-                                            '%a %b %d %I:%M:%S %Y')
+                timeout = datetime.strptime(rend.group(1), timeformat)
 
 
 # PRINT EVERYTHING
