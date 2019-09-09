@@ -57,7 +57,7 @@ Technical Plan
 1. Destination of deposit:
     a. CULAR-Overflow SFS (archivalXX)/S3; use overflow ingest procedures to create JSON manifest and ingest appropriately
     b. Metadata, JSON, and _Documentation folder and contents will be ingested into CULAR-Classic
-    c. Destination path is RMC/$RMC_SUBDIVISION/$CULAR_TITLE
+    c. Destination path is RMC/$RMC_SUBDIVISION/$CULAR_TITLE/
 2. Resources:
     a. The source for assets is smb://files.cornell.edu/lib/$RMC_SERVER/_RMC/FOR_CULAR/$CULAR_TITLE/
     b. Aggregate size is $AGGREGATE_SIZE
@@ -65,7 +65,7 @@ Technical Plan
     c. Ingest as arranged at source
     d. JSON manifest for assets is placed directly within the source folder.
 3. Documentation:
-    a. The source for the _Documentation folder is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE
+    a. The source for the _Documentation folder is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/
     b. Ingest as arranged
 4. Metadata:
     a. The source for collection level metadata is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/$CULAR_TITLE.xml
