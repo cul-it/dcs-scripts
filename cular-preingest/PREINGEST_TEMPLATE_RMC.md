@@ -1,7 +1,7 @@
 THIS DOCUMENT HAS BEEN GENERATED AUTOMATICALLY
 ----------------------------------------------
 
-Template version: 2019-04-29
+Template version: 2020-03-30
 Depositor: **The Division of Rare and Manuscript Collections**  
 Collection title: **$COLLECTION_TITLE**  
 CULAR title: **$CULAR_TITLE**  
@@ -63,7 +63,7 @@ Technical Plan
     b. Aggregate size is $AGGREGATE_SIZE
         * $NUMBER_TYPE_LIST
     c. Ingest as arranged at source
-    d. JSON manifest for assets is placed directly within the source folder.
+    d. Json manifest for transfer will be placed on the appropriate JIRA ticket for the work.
 3. Documentation:
     a. The source for the _Documentation folder is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/
     b. Ingest as arranged
