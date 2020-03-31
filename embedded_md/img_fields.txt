@@ -1,0 +1,13 @@
+SourceFile
+IPTC:By-line
+IPTC:Caption-Abstract
+XMP:CreateDate
+IPTC:OriginalTransmissionReference
+XML-photoshop:TransmissionReference
+IPTC:Source
+XMP-photoshop:Source
+IPTC:CopyrightNotice
+IFD0:Copyright
+XMP-dc:Rights
+xmpRights:Marked
+Photoshop:CopyrightFlag
