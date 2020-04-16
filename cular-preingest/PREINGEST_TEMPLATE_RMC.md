@@ -1,7 +1,7 @@
 THIS DOCUMENT HAS BEEN GENERATED AUTOMATICALLY
 ----------------------------------------------
 
-Template version: 2020-03-30
+Template version: 2020-04-16
 Depositor: **The Division of Rare and Manuscript Collections**  
 Collection title: **$COLLECTION_TITLE**  
 CULAR title: **$CULAR_TITLE**  
@@ -68,7 +68,7 @@ Technical Plan
     a. The source for the _Documentation folder is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/
     b. Ingest as arranged
 4. Metadata:
-    a. The source for collection level metadata is smb://files.cornell.edu/lib/CULARIngest/RMC/$RMC_SUBDIVISION/$CULAR_TITLE/$CULAR_TITLE.xml
+    a. Collection level metadata ($CULAR_TITLE.xml) will be placed on the appropriate JIRA ticket for the work.
 5. Filesystem dates do not need to be captured.
 6. The assets are not believed to contain sensitive data.
 7. When ingest is complete developers will notify **Dianne Dietrich** who will work with depositor to obtain final sign off.
