@@ -1,7 +1,7 @@
 THIS DOCUMENT HAS BEEN GENERATED AUTOMATICALLY
 ----------------------------------------------
 
-Template version: 2020-04-16
+Template version: 2020-05-20
 Depositor: **The Division of Rare and Manuscript Collections**  
 Collection title: **$COLLECTION_TITLE**  
 CULAR title: **$CULAR_TITLE**  
@@ -11,8 +11,8 @@ Date Finalized:
 Partners
 --------
 * **$CURATOR**, **$CURATOR_ROLE**, curates the archival collection on behalf of The Division of Rare and Manuscript Collections.
-* **Erin Faulder**, **Digital Archivist**, will represent the depositor, The Division of Rare and Manuscript Collections (RMC).
-* **Erin Faulder**, **Digital Archivist**, will coordinate licensing, access rights, and make records of this available for deposit.
+* **Erin Faulder**, **Assistant Director for Digital Strategies**, will represent the depositor, The Division of Rare and Manuscript Collections (RMC).
+* **Erin Faulder**, **Assistant Director for Digital Strategies**, will coordinate licensing, access rights, and make records of this available for deposit.
 * **Dianne Dietrich**, **Digital Projects Librarian**, will assist in arrangement of the assets and coordination of the deposit according to the plan described below.
 * **Michelle Paolillo**, **CULAR Service Manager**, will work directly with Dianne to determine the logistics of the flow of assets from current storage into preservation storage. She will also coordinate the work of the development team to facilitate ingest.
 
@@ -26,7 +26,7 @@ Assets
         * Files with EXIFTOOL output in XML format that describes technical attributes of the assets in greater detail.
 2. Designated Community:
     a. Subject tracings are included in the EAD collection level metadata and the RMC finding aid.
-3. Rights statement prepared by Copyright Services:
+3. Rights statement:
     a. Contact The Division of Rare and Manuscript Collections for rights and access restrictions associated with this material.
 4. Coordinated copies:
     a. None.
